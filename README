@@ -1,4 +1,4 @@
-scriptname version 0.5
+scriptname version 0.6
 
   This module locates the full path to the current script's directory to allow
   the use of of paths relative to the script's directory. Also, it can unshift

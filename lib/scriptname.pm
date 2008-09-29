@@ -7,7 +7,7 @@ use 5.000;
 my($myname, $mybase, $mydir);
 
 BEGIN {
-  our $VERSION = '0.5';
+  our $VERSION = '0.6';
   our $AUTHORITY = 'MASSA';
 
   use Carp;
@@ -61,7 +61,7 @@ scriptname - Locate original perl script
 
 =head1 VERSION
 
-This document describes scriptname version 0.5
+This document describes scriptname version 0.6
 
 
 =head1 SYNOPSIS

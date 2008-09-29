@@ -1,5 +1,8 @@
 Revision history for scriptname
 
+0.6  Mon Sep 29 12:52:11 2008
+     Attempt to silent PAUSE FAIL messages
+
 0.5  Sat Sep 27 15:35:06 2008
      Lifted requirement for 5.008
 
