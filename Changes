@@ -1,0 +1,12 @@
+Revision history for scriptname
+
+0.5  Sat Sep 27 15:35:06 2008
+     Lifted requirement for 5.008
+
+0.4  Fri Sep 26 16:13:26 2008
+     Changes in documentation to reflect differences between
+     scriptname and FindBin.
+
+0.3  Thu Sep 25 10:55:48 2008
+     Initial release.
+
