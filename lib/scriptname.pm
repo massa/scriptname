@@ -32,7 +32,7 @@ BEGIN {
 sub myname() { $myname } ## no critic
 sub mybase() { $mybase } ## no critic
 sub mydir()  { $mydir  } ## no critic
-sub _mylib   { map realpath("$mydir/$_"), @_ ? @_ : $_ }
+sub _mylib   { map realpath("$mydir/$_"), @_ ? @_ : qw(lib) }
 
 sub import {
   my $package = shift;
