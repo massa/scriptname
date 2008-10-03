@@ -7,7 +7,7 @@ use 5.000;
 my($myname, $mybase, $mydir);
 
 BEGIN {
-  our $VERSION = '0.6';
+  our $VERSION = '0.7';
   our $AUTHORITY = 'MASSA';
 
   use Carp;
@@ -32,7 +32,7 @@ BEGIN {
 sub myname() { $myname } ## no critic
 sub mybase() { $mybase } ## no critic
 sub mydir()  { $mydir  } ## no critic
-sub _mylib   { map realpath("$mydir/$_"), @_ }
+sub _mylib   { map realpath("$mydir/$_"), @_ ? @_ : $_ }
 
 sub import {
   my $package = shift;
@@ -61,7 +61,7 @@ scriptname - Locate original perl script
 
 =head1 VERSION
 
-This document describes scriptname version 0.6
+This document describes scriptname version 0.7
 
 
 =head1 SYNOPSIS
@@ -82,7 +82,15 @@ you can also use
 
     no scriptname lib => '../lib';
 
-to remove a relative path from C<@INC>.
+to remove a relative path from C<@INC>. As a special case,
+
+    use scriptname 'lib';
+
+is equivalent to
+
+    use scriptname lib => 'lib';
+
+(unshift the path to the current script + 'lib' in @INC)
 
 =head1 DESCRIPTION
 

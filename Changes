@@ -1,5 +1,8 @@
 Revision history for scriptname
 
+0.7  Fri Oct  3 11:49:18 2008
+     New use of 'lib' flag; some test tweaks
+
 0.6  Mon Sep 29 12:52:11 2008
      Attempt to silent PAUSE FAIL messages
 
@@ -8,8 +11,8 @@ Revision history for scriptname
 
 0.4  Fri Sep 26 16:13:26 2008
      Changes in documentation to reflect differences between
-     scriptname and FindBin.
+     scriptname and FindBin
 
 0.3  Thu Sep 25 10:55:48 2008
-     Initial release.
+     Initial release
 
