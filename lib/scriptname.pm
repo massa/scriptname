@@ -7,7 +7,6 @@ use 5.000;
 my($myname, $mybase, $mydir);
 
 BEGIN {
-  our $VERSION = '0.7';
   our $AUTHORITY = 'MASSA';
 
   use Carp;
@@ -109,24 +108,20 @@ If perl is invoked using the B<-e> option or the perl script is read from
 C<STDIN> then the module sets C<mydir> to the current working
 directory.
 
-=head1 EXPORTABLE FUNCTIONS
-
-=over
-
-=item C<< myname >>
+=func myname
 
 fully qualified path for the script (with all links resolved), undef if called
 from C<-e> or C<STDIN>
 
-=item C<< mybase >>
+=func mybase
 
 basename of C<myname>, or undef
 
-=item C<< mydir >>
+=func mydir
 
 dirname of C<myname>, or the current working directory if called from C<-e> or C<STDIN>
 
-=back
+=func $0
 
 The result of C<myname> is also put in C<$0> unless called from C<-e> or C<STDIN>.
 
@@ -236,9 +231,9 @@ L<http://rt.cpan.org>.
 
 Humberto Massa  C<< <massa@cpan.org> >>
 
-=head1 LICENCE AND COPYRIGHT
+=head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2008, Humberto Massa C<< <massa@cpan.org> >>. All rights reserved.
+Copyright (c) 2008-2013, Humberto Massa C<< <massa@cpan.org> >>. All rights reserved.
 
 This module is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself. See L<perlartistic>.  Optionally,
