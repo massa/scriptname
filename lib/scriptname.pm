@@ -1,4 +1,5 @@
 package scriptname;
+# ABSTRACT: Locate original perl script
 
 use strict;
 use warnings;
@@ -7,6 +8,7 @@ use 5.000;
 my($myname, $mybase, $mydir);
 
 BEGIN {
+  our $VERSION = '0.8';
   our $AUTHORITY = 'MASSA';
 
   use Carp;
@@ -49,19 +51,7 @@ sub unimport {
 }
 
 # Magic true value required at end of module
-1
-
-__END__
-
-=head1 NAME
-
-scriptname - Locate original perl script
-
-
-=head1 VERSION
-
-This document describes scriptname version 0.7
-
+1;
 
 =head1 SYNOPSIS
 
@@ -227,22 +217,15 @@ C<bug-scriptname@rt.cpan.org>, or through the web interface at
 L<http://rt.cpan.org>.
 
 
-=head1 AUTHOR
+=head1 ALTERNATIVE LICENSE TERMS
 
-Humberto Massa  C<< <massa@cpan.org> >>
-
-=head1 COPYRIGHT AND LICENSE
-
-Copyright (c) 2008-2013, Humberto Massa C<< <massa@cpan.org> >>. All rights reserved.
-
-This module is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself. See L<perlartistic>.  Optionally,
-you can redistribute and/or modify it under the terms of any of the
-following licenses, at your will: GNU GPLv2, GNU GPLv3, CC-GPLv2,
-CC-SAv3.0.
+Optionally, instead of using the Perl 5 programming language licensing
+terms, you are also autorized to redistribute and/or modify it under the
+terms of any of the following licenses, at your will: GNU LGPLv2, GNU
+LGPLv3, CC-LGPLv2, CC-By-SAv3.0.
 
 Please notice that the alternatives given in the previous paragraph apply
-B<only for this module>.
+B<only for this module> and other modules where explicitly stated.
 
 =head1 DISCLAIMER OF WARRANTY
 
