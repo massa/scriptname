@@ -1,5 +1,11 @@
 Revision history for scriptname
 
+0.9  Wed Dec 19 12:43:22 2012
+     Absent changelog
+
+0.8  Wed Dec 19 12:41:22 2012
+     Using Dist::Zilla and other tweaks
+
 0.7  Fri Oct  3 11:49:18 2008
      New use of 'lib' flag; some test tweaks
 
