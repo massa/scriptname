@@ -8,7 +8,7 @@ use 5.000;
 my($myname, $mybase, $mydir);
 
 BEGIN {
-  our $VERSION = '0.9';
+  our $VERSION = '0.10';
   our $AUTHORITY = 'MASSA';
 
   use Carp;
