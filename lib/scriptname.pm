@@ -8,7 +8,7 @@ use 5.000;
 my($myname, $mybase, $mydir);
 
 BEGIN {
-  our $VERSION = '0.92';
+  our $VERSION = '0.93';
   our $AUTHORITY = 'MASSA';
 
   use Carp;
@@ -18,7 +18,8 @@ BEGIN {
   if( $0 eq '-' || $0 eq '-e' ) {
     $mydir = cwd
   } else {
-    $myname = $0 = realpath $0;
+    my($zero) = ($0 =~ /^(.*)$/);
+    $myname = $0 = realpath $zero;
     $mybase = basename $0, qw(.t .pm .pl .perl .exe .com .bat);
     $mydir = dirname $0;
     croak 'chdir() too early' unless -f $0
@@ -52,6 +53,18 @@ sub unimport {
 
 # Magic true value required at end of module
 1;
+
+
+__END__
+=pod
+
+=head1 NAME
+
+scriptname - Locate original perl script
+
+=head1 VERSION
+
+version 0.93
 
 =head1 SYNOPSIS
 
@@ -98,23 +111,24 @@ If perl is invoked using the B<-e> option or the perl script is read from
 C<STDIN> then the module sets C<mydir> to the current working
 directory.
 
-=func myname
+=head1 FUNCTIONS
+
+=head2 myname
 
 fully qualified path for the script (with all links resolved), undef if called
 from C<-e> or C<STDIN>
 
-=func mybase
+=head2 mybase
 
 basename of C<myname>, or undef
 
-=func mydir
+=head2 mydir
 
 dirname of C<myname>, or the current working directory if called from C<-e> or C<STDIN>
 
-=func $0
+=head2 $0
 
 The result of C<myname> is also put in C<$0> unless called from C<-e> or C<STDIN>.
-
 
 =head1 DIAGNOSTICS
 
@@ -220,7 +234,6 @@ L<http://rt.cpan.org>.
 
 C<stevenl@cpan.org>, for pointing a silly mistake in my tests
 
-
 =head1 ALTERNATIVE LICENSE TERMS
 
 Optionally, instead of using the Perl 5 programming language licensing
@@ -253,3 +266,17 @@ RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A
 FAILURE OF THE SOFTWARE TO OPERATE WITH ANY OTHER SOFTWARE), EVEN IF
 SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF
 SUCH DAMAGES.
+
+=head1 AUTHOR
+
+Humberto Massa <massa@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2013 by Humberto Massa.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+
